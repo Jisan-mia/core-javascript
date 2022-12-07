@@ -118,3 +118,6 @@ function myFunc1() {
 }
 console.log(myFunc1())
 ```
+
+
+## JavaScript Prototype
