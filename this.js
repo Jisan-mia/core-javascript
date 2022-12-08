@@ -94,3 +94,14 @@ const tesla3 = new ElectricCar('Tesla 3', 2003) // Tesla 3 has founded in 2003
 
 
 // iv) window binding
+
+var PrintJavascript = function() {
+	// here `this` points to the global object for nodejs and window for browser
+	console.log(this)
+}
+
+var js = {
+	name: 'JavaScript'
+}
+
+PrintJavascript()
