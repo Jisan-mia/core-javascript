@@ -55,10 +55,11 @@ const tesla = Car('Tesla 3', 2003)
 
 // ii) explicit binding
 // in explicit binding we explicitly tell the function who will be the `this` using call method
-// explicitly binding by call, apply method
+// explicitly binding by call, apply and bind method
 // call method takes params one after another, every parameter should be comma(,) separated
 // but for apply method we pass object to denote `this` and other parameter as array in one parameter
-
+// bind method is same as call method, except bind method returns the function rather calling the function
+// it returns the instance of the function, and we can store it on a variable an call it later
 var printCarModel = function (feature1, feature2) {
 	console.log(`${this.model} key features are ${feature1}, ${feature2}`)
 }
@@ -73,10 +74,23 @@ var feature2 = 'Driver Airbag'
 var features = ['Air Conditioner', 'Driver Airbag']
 
 // printCarModel.call(porsche, feature1, feature2)
-printCarModel.apply(porsche, features)
-
+// printCarModel.apply(porsche, features)
+const newFunc = printCarModel.bind(porsche, feature1, feature2)
+newFunc()
 
 
 
 // iii) new binding
+
+function ElectricCar(model, founded) {
+	// let this = Object.create(null)
+	this.model = model
+	this.founded = founded
+	console.log(`${this.model} has founded in ${this.founded}`);
+	// return this
+}
+
+const tesla3 = new ElectricCar('Tesla 3', 2003) // Tesla 3 has founded in 2003
+
+
 // iv) window binding
