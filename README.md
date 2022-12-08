@@ -207,12 +207,14 @@ console.log(anotherCar.start())
 // i. we should inherit the prototype by assigning Object.create(ParentClass.prototype) this onto child function prototype
 // ii. we should pass the child this to the parent as the reference of parent this explicitly by ParentClass.call(this)
 // iii. since we're overriding the child constructor Function with `Parent.call(this)`(because by default in js constructor don't have `Parent.call(this)` in ints prototype)
-// 
+
+//parent class
 function Car(model, founded) {
   this.model = model;
   this.founded = founded;
 }
 
+// subclass
 function ElectricCar(model, founded, battery, charger, hasAutopilot) {
   Car.call(this) // 2nd step
   this.model = model;
@@ -247,4 +249,49 @@ const myCar = new Car('Ferrari', 1895);
 const tesla = new ElectricCar('Tesla Model 3', 2022, 'Tesla Powerwall', 'Tesla SuperCharger', true)
 console.log(tesla.start()) // Tesla Model 3 has started
 console.log(tesla.startAutoPilot()) //Tesla Model 3 is in autopilot mode
+```
+
+
+## Inheritance in es6-class
+```javascript
+
+class Car {
+  //parent class
+  constructor(model, founded) {
+    this.model = model;
+    this.founded = founded;
+  }
+  start() {
+    console.log(`${this.model} has started`)
+  }
+  break() {
+    console.log(`${this.model} just break`)
+  }
+  accelerate() {
+    console.log(`${this.model} is accelerating`)
+  }
+}
+
+class ElectricCar extends Car{
+  //subclass
+  constructor(model, founded, battery, charger, hasAutopilot) {
+    super(model, founded)
+    this.model = model;
+    this.founded = founded;
+    this.battery = battery;
+    this.charger = charger;
+    this.hasAutopilot = hasAutopilot;
+  }
+
+  startAutoPilot() {
+    console.log(`${this.model} is in autopilot mode`)
+  }
+}
+
+const myCar = new Car('Ferrari', 1895);
+// console.log(myCar.startAutoPilot()) // error
+
+const tesla = new ElectricCar('Tesla Model 3', 2022, 'Tesla Powerwall', 'Tesla SuperCharger', true)
+console.log(tesla.start())
+
 ```
