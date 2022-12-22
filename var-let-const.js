@@ -1,6 +1,6 @@
-/*     
-// var                                
-i) var is function Scope, hence a dclared variable with var into a function cannot be accessed outside of function scope. 
+/*
+// var
+i) var is function Scope, hence a dclared variable with var into a function cannot be accessed outside of function scope.
 ii) keyword with var variable can be redeclared and reassigned in it's scope
 
 -----------
