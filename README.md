@@ -616,8 +616,8 @@ At first javascript creates the global Execution context and execution stack has
                                       - d: 4
                                       - c: 3
                                       - prints c+d which is 7
-                              4. now three() function returns and popped out from the top of the execution stack
-                  3. two() function returns and popped out
-        2. one() function returns and popped out
-1. global execution context popped out
+                              - now three() function returns and popped out from the top of the execution stack (4)
+                  - two() function returns and popped out(3)
+        - one() function returns and popped out(2)
+- global execution context popped out(1)
 
