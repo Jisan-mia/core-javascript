@@ -1,3 +1,4 @@
+// what do you thing that output will be?
 function func1() {
   return {
     name: "Akarshan"
