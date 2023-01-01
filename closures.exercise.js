@@ -44,3 +44,26 @@ function inArray(arr) {
 
 const result1 = arr.filter(inArray([4,6,10])) // [4,6]
 console.log(result1)
+
+
+// exercise 4: sort by filed function
+// we want to sort array of objects by the object fields using sort() array method
+// now create a function for Array.sort(f) method(since sort method runs a function(f) over every elements)
+// now create that function sort(f) takes as argument and sorts the object by field
+
+const studentObj = [
+  {name: 'Shaown', roll: 6},
+  {name: 'Shakil', roll: 25},
+  {name: 'Mursalin', roll: 10},
+  {name: 'Porag', roll: 5}
+]
+
+function sortByField(fieldName) {
+  return function(a,b) {
+    return a[fieldName] > b[fieldName] ? 1 : -1
+  }
+}
+
+
+studentObj.sort(sortByField('roll'))
+console.log(studentObj);
