@@ -541,7 +541,7 @@ PrintJavascript() // global/window object
 ## Execution Context in JavaScript
 Execution Context
 1. Global Execution Context
-   - there is to phase in global execution context
+   - there is two phase in global execution context
       1. Loading/Creation Phase
       2. Execution Phase
     - Properties created by Global Execution Context Object in loading/creation phase
@@ -629,3 +629,19 @@ At first javascript creates the global Execution context and execution stack has
         - one() function returns and popped out(2)
 - global execution context popped out(1)
 
+### Summary
+- Every time a function is called in JavaScript, an execution context is created.
+- Every execution context is created in two phases
+  - Creation Phase
+  - Execution Phase
+- The first execution context that is created is the **Global Execution Context**
+- And every function that is called within a program will have its own execution context, contained within the global execution context
+- List of feathers created before any line of code executes within a function in the creation phase:
+  1. A reference to the object that called the function is stored in memory. In the case of the Global Execution Context, in a browser, that reference is of the window object.
+  2. The keyword ‘this’ is created and stored in memory. Within the function, it will refer to the object that called the function.
+  3. The function’s ‘outer environment’, its ‘scope chain’ is created.
+  4. Its own ‘memory container’ for variables, arguments, and function declarations is created. Note that in the Creation Phase the JS Engine stores all variables and arguments with an initial value of ‘undefined.’
+- After the Creation Phase sets up the execution context, the JS Engine begins synchronously executing the code within the function, one line at a time, from top to bottom - this is Phase 2, the Execution Phase.
+- The Execution Phase is all about returning values. It evaluates expressions, which return values, and executes functions, which return values. The variables and arguments that were stored in Step 4 above will go from undefined, to the value the expression returns
+- Hoisting: It is important to understand that Step 4 above happens in the Creation Phase, that is, all variables are stored in memory before any function is executed. This process of storing variables before any code executes is called hoisting.
+- Hoisting sounds like it might mean that variables, arguments, and function declarations are lexically moved to the top of the code, but in reality, they stay exactly where they are.
