@@ -4,7 +4,7 @@
 // here we'll learn in 4 rules to learn about this keyword
 // i) implicit binding
 // 1. where the function has been called
-// 2. is there any dot notation before the call ? 
+// 2. is there any dot notation before the call ?
 // 3. Yes, what there in the immediate left of the dot(.), will denote the `this`
 
 // example 1
@@ -105,3 +105,16 @@ var js = {
 }
 
 PrintJavascript()
+
+
+// summary
+/*
+- In function and global scope ‘this’ always points to the window. Though this changes when you are - in strict mode or Nodejs .
+- In Object this points to the object’s context only
+- In constructor, this points to the newly created instance.
+- We can change the context of this by using — call(), apply() and bind()
+- If you just bind the context and do not want to execute the function then use bind(). Always remember bind() works only once
+- If you want to pass an array of arguments to this then you use apply(). Otherwise, use call().
+- The beauty of this is its dynamic nature and it changes in the context you are running it.
+
+*/
