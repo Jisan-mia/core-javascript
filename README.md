@@ -58,6 +58,14 @@ if (true) {
 
 <br />
 
+### More on scopes
+- When an execution context is created, so is its scope chain.
+- The scope chain is simply the memory space of the function that was called, and the memory space of its outer environment
+- If a function is called within a function, it will have a scope chain of its own memory space, its outer environment's memory space, and the global execution context memory space.
+- Scope chaining is simply the process of the JS Engine scanning the scope chain for the called variable, argument or function.
+- It starts looking from its inner most environment and scanning out.
+- it will return the value of the the called variable, argument, or function, as soon as it finds it in the scope chain, or it will return a reference error that will say the variable, argument, or function that was called is not defined, which means it does not exist in its scope chain.
+
 ## Hoisting
 
 - Hoisting is, when we declare variables(var), how javascript deal with this
