@@ -654,6 +654,10 @@ At first javascript creates the global Execution context and execution stack has
 - Hoisting: It is important to understand that Step 4 above happens in the Creation Phase, that is, all variables are stored in memory before any function is executed. This process of storing variables before any code executes is called hoisting.
 - Hoisting sounds like it might mean that variables, arguments, and function declarations are lexically moved to the top of the code, but in reality, they stay exactly where they are.
 
+### More on closure
+- If a function returns a function, or it returns an object with functions, those ‘inner functions’ that were returned have access to the variables of the ‘outer function,’ even after the outer function returns and is popped off the stack.
+- When an outer function is returned and popped off the stack, it puts all the variables of its own block scope into a closure and puts that closure in the scope chain of the inner function.
+
 ## Higher Order Function
 
 - functions in javascript are special type of object
