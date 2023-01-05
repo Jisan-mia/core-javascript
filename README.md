@@ -58,7 +58,7 @@ if (true) {
 
 <br />
 
-### More on scopes
+### More on scopes chain
 - When an execution context is created, so is its scope chain.
 - The scope chain is simply the memory space of the function that was called, and the memory space of its outer environment
 - If a function is called within a function, it will have a scope chain of its own memory space, its outer environment's memory space, and the global execution context memory space.
