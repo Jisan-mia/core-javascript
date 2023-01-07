@@ -66,3 +66,24 @@ console.log(totalProduct([
 ]));
 
 
+
+// exercise-4: twoSumPairs
+// Write a function `twoSumPairs(numbers, target)` that accepts an array of numbers and a target number
+// as arguments. The function should return a 2D array containing all unique pairs of elements that
+// sum to the target.
+
+
+function twoSumPairs(number, target) {
+  const resultArr = []
+  for(let i = 0; i < number.length; i++) {
+
+    for(let j = i+1; j < number.length; j++) {
+      if((number[i] + number[j]) == target) {
+        resultArr.push([number[i], number[j]])
+      }
+    }
+  }
+  return resultArr;
+}
+
+console.log(twoSumPairs([2, 3, 4, 6, 5], 8)); // [ [2, 6], [3, 5] ]
