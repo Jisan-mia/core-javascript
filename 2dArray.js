@@ -87,3 +87,28 @@ function twoSumPairs(number, target) {
 }
 
 console.log(twoSumPairs([2, 3, 4, 6, 5], 8)); // [ [2, 6], [3, 5] ]
+
+
+
+// exercise-4: zipper
+// Write a function `zipper` that accepts two arrays as arguments. The function should return a 2D
+// array containing pairs of elements at the same indices. You can assume that the arrays have the
+// same length.
+
+
+function zipper(arr1, arr2) {
+  const resultArr = [];
+  for(let i = 0; i < arr1.length; i++) {
+    resultArr.push([arr1[i], arr2[i]])
+  }
+  return resultArr
+}
+
+let array1 = ["whisper", "talk", "shout"];
+let array2 = ["quiet", "normal", "loud"];
+console.log(zipper(array1, array2));
+// [
+//   ['whisper', 'quiet'],
+//   ['talk', 'normal'],
+//   ['shout', 'loud'],
+// ]
