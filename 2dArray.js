@@ -16,7 +16,7 @@ function print2d(twoDArray) {
   for(let i = 0; i < arr.length; i++) {
     const subArray = arr[i]
     for(let j = 0; j < subArray.length; j++) {
-      str += arr[i][j]
+      str += subArray[j]
     }
   }
   return str
