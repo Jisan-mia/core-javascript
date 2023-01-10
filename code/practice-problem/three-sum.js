@@ -32,5 +32,34 @@ function threeSum1(arr, target) {
   }
 }
 
-console.log(threeSum1(numsArr, target))
+// console.log(threeSum1(numsArr, target))
 
+// optimized way
+function twoSum(arr, target) {
+  let pairSums = {};
+
+  for(let i = 0; i < arr.length; i++) {
+
+    for(let j = i+i; j < arr.length; j++) {
+      const number1 = arr[i];
+      const number2 = arr[j]
+      const sum = number1 + number2
+
+      pairSums[sum] = [number1, number2]
+
+    }
+  }
+
+  for(let num of arr) {
+    const difference = target - num;
+    if(difference in pairSums) {
+      const [numB, numC] = pairSums[difference]
+
+      return num * numB * numC
+
+    }
+  }
+
+}
+
+console.log(twoSum(numsArr, target));
