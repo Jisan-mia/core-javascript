@@ -12,6 +12,23 @@ const target = 10
 // should return 8*2 =
 // set = {7, 8, 5, 9, }
 
+// not optimized solution using 2 level nested for loop
+
+function twoSum1(arr, target) {
+  for(let i = 0; i< arr.length; i++) {
+    let number1 = arr[i];
+
+    for(let j = i+1; j < arr.length; j++) {
+      let number2 = arr[j]
+
+      if(number1 + number2 == target) {
+        return number1 * number2
+      }
+    }
+  }
+}
+console.log('2 nested for loop', twoSum1(numsArr, target))
+
 function twoSum(arr, target) {
   let numberSet = new Set();
 
@@ -25,4 +42,5 @@ function twoSum(arr, target) {
   }
 }
 console.group(twoSum(numsArr, target))
+
 
