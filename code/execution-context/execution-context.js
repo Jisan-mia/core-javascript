@@ -1,4 +1,9 @@
 // Execution Context
+
+// A Wrapper to help manage the code that is running
+
+// There are lots of lexical environments. Which one is currently running is managed via execution contexts. It can contain things beyond what you've written in your code
+
 /*
 Execution Context
   1. Global Execution Context
