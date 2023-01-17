@@ -2,8 +2,14 @@
 // Operator is a special function that is syntactically(written) differently. Generally operators take two parameters and return one result
 
 // addition operator example
-var a = 5+7
-console.log(a)
+var a = 4+3
+console.log(a) // 7
+/*
+- we know operators are special function which takes 2 parameters and returns result
+- here addition(+) operator takes 4 and 3 as argument and returns the addition of them
+- which is 7
+*/
+
 
 // Operator Precedence:
 // means which operator function gets called first. functions are called in order of precedence. higher precedence wins.
