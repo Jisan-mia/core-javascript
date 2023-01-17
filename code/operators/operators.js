@@ -36,5 +36,29 @@ console.log(c); // 35
 // Associativity
 // what order operator function get called in: left-to-right(left associativity) or right-to-left(right associativity) when the operator function have the same precedence
 
+// left-to-right(left associativity): Meaning the furthest one to the left, the furthest operator to the left will be called first.
+
+// right-to-left(right associativity): meaning the operator furthest to the right will be called fist
+
+// examples
+var x = 2, y = 3, z = 5;
+
+x = y = z;
+
+console.log(x,y,z) // 5, 5 , 5
+
+/*
+- why and how al x, y and z value is 5
+- well because of associativity of assignment operator
+- here x gets the value of y and y gets the value of z
+- so which one gets value of which one first is being decided by associativity
+- assignment(=) operator is right or right to left associativity
+- thats why furthest operator to the right will be called first
+- Steps
+  i. y = z (assigns value of z(5) to y and returns 5)
+  ii. x = 5 (since y = z returned 5)
+  iii. so x gets assigned 5 also and returns it
+- at last value of, x = 5, y = 5 and z = 5
 
 
+*/
