@@ -14,6 +14,7 @@ console.log(JSON.stringify(objectLiteral));
 /*
 - json data is used to transfer data across the internet
 - json data property have to be written inside quote("")
+- methods is not allowed in json
 - all valid json is valid javascript object literal but
 - not all valid javascript object literal is valid json
 */
