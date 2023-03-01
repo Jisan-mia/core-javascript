@@ -1,5 +1,5 @@
 // async await in javascript
-const hasMeeting = false;
+const hasMeeting = true;
 
 const meeting = new Promise((resolve, reject) => {
   if (!hasMeeting) {
@@ -15,20 +15,19 @@ const meeting = new Promise((resolve, reject) => {
 });
 
 const addToCalender = (meetingDetail) => {
-  //   return new Promise((resolve) => {
-  //     const calenderDetail = `Meeting for ${meetingDetail.name} added on calender in ${meetingDetail.tool} at ${meetingDetail.time}`;
-  //     resolve(calenderDetail);
-  //   });
   const calenderDetail = `Meeting for ${meetingDetail.name} added on calender in ${meetingDetail.tool} at ${meetingDetail.time}`;
   return Promise.resolve(calenderDetail);
 };
 
-// promise chaining
-meeting
-  .then(addToCalender)
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+async function myMeeting() {
+  try {
+    const meetingDetail = await meeting;
+    const calenderDetail = await addToCalender(meetingDetail);
+
+    console.log(calenderDetail);
+  } catch {
+    console.log('something went wrong')
+  }
+}
+
+myMeeting();
