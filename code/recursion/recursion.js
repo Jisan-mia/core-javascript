@@ -33,3 +33,7 @@ function sum(n) {
 }
 
 console.log(sum(10))
+
+// more efficient way
+const n = 100000
+console.log((n*(n-1))/2)
