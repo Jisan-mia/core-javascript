@@ -7,4 +7,6 @@
     i. Memory heap - this is where the memory allocation happens
     ii. Call Stack - this is where your stack frames are as your code executes
 
+
+- some asynchronous task is handled by browser web api like setTimeOut, setInterval
 */
