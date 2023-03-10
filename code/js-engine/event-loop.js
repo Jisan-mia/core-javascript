@@ -9,8 +9,8 @@
 - web apis -> provided by browser and for nodejs there is c++ apis 
 - event loop -> event loop pulls non-blocking asynchronous task from render queue, microtask queue, callback queue to the call stack and executes there
 - note: event loop runs when the call stack is empty
-- render queue -> elements that render on the website
-- microtask queue -> javascript promise, async-await task
+- render queue -> elements that render on the website (priority to event loop is getter than callback queue)
+- microtask queue -> javascript promise, async-await task (priority to event loop is getter than callback queue)
 - callback queue -> setTimeOut, setInterval callbacks
 */
 
