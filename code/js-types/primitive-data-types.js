@@ -36,3 +36,10 @@ var bol = new Boolean(true)
 console.dir(str)
 console.dir(num)
 console.dir(bol)
+
+
+// primitives are not mutable
+var name = 'jisan'
+name.age = 21 // js engine just ignore this.
+console.log(name) // 'jisan'
+// like variableName.name = 'name' is not possible for primitives
