@@ -1,12 +1,13 @@
 // Primitive data types are
 /*
-- String
-- Number
-- Boolean
+- String = 'i am string'
+- Number = 21
+- Boolean = true or false
 - Null
 - Undefined
 - Symbol(es6)
 */
+
 
 var a = 'javascript'
 var b = a;
@@ -22,3 +23,16 @@ in the above code block, there is 2 variable a and b,
 
 we get expected output, because when we assign a variable to another variable, primitive values copies the value to the another variable
 */
+
+
+
+// Primitive Wrapper type
+// we have object representation for number, string, and boolean
+// new String(), new Number(), new Boolean()
+var str = new String('Sakib')
+var num = new Number(5)
+var bol = new Boolean(true)
+
+console.dir(str)
+console.dir(num)
+console.dir(bol)
