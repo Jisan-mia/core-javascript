@@ -10,6 +10,39 @@
       body {
         font-family: "Fira Code";
       }
+      label {
+        display: block;
+      }
+      .error {
+        color: rgb(228, 60, 60);
+      }
+      .success {
+        color: rgb(22, 179, 22);
+      }
+      .post {
+        border: 1px solid lightgray;
+        padding: 4px 6px;
+      }
+      form {
+        width: 100%;
+        max-width: 800px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid lightgray;
+        padding: 5px 8px;
+        font-size: 14px;
+      }
+
+      button {
+        border: 1px solid tomato;
+        padding: 6px 14px;
+        font-size: 16px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -18,10 +51,30 @@
         <h1>The XMLHttpRequest way</h1>
       </div>
 
-      <div>
-        <button id="get-btn">Get Data</button>
-        <button id="send-btn">Send Data</button>
-      </div>
+      <form>
+        <div>
+          <label for="title">Post Title</label>
+          <input id="title" type="text" required />
+        </div>
+        <br />
+        <div>
+          <label for="body">Post Body</label>
+          <textarea rows="6" id="body" type="text" required></textarea>
+        </div>
+        <br />
+        <button name="list" type="button" id="get-list-btn">
+          Get Post List
+        </button>
+        <button name="random" type="button" id="get-btn">
+          Get Random Post
+        </button>
+        <button name="post" type="submit" id="send-btn">Add a Post</button>
+        <button name="edit" type="submit" id="edit-btn">Edit Post</button>
+        <button name="delete" type="submit" id="delete-btn">Delete Post</button>
+      </form>
+
+      <br />
+      <div id="responseArea"></div>
     </main>
     <script src="./XMLHttpRequest.js"></script>
   </body>
