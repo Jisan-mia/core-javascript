@@ -1,5 +1,3 @@
-﻿# Summary of advance topic in JS
-
 ## JavaScript Scopes
 
 - child function can access and modify their parent variables
