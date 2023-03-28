@@ -1,9 +1,9 @@
 // example 1
 function bankAccount(initialBalance) {
-	var balance = initialBalance;
-	return function () {
-		return balance;
-	};
+  var balance = initialBalance;
+  return function () {
+    return balance;
+  };
 }
 
 var account = bankAccount(1000);
@@ -13,11 +13,11 @@ console.dir(account);
 // example 2
 var num1 = 2;
 var sum = function () {
-	var num2 = 3;
-	var num = 6;
-	return function () {
-		return num;
-	};
+  var num2 = 3;
+  var num = 6;
+  return function () {
+    return num;
+  };
 };
 var myFunc = sum();
 
@@ -45,12 +45,12 @@ console.dir(myFunc);
 // asynchronous
 var a;
 function async() {
-	a = 20;
+  a = 20;
 
-	var myFunc = () => {
-		console.log(a);
-	};
-	setTimeout(myFunc, 3000);
+  var myFunc = () => {
+    console.log(a);
+  };
+  setTimeout(myFunc, 3000);
 }
 // async(); // a = 30
 
@@ -67,7 +67,16 @@ function async() {
 
 // job interview qu.
 for (var i = 0; i < 3; i++) {
-	setTimeout(() => {
-		console.log(i);
-	}, 3000);
+  setTimeout(() => {
+    console.log(i);
+  }, 3000);
+}
+
+// solution
+for (var i = 0; i < 3; i++) {
+  let j = i;
+
+  setTimeout(function () {
+    console.log(j);
+  }, 3000);
 }
