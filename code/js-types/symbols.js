@@ -39,8 +39,15 @@ console.log(obj)
 
 // why do we need Symbols?
 //  i. javascript internally use symbol
+var languageObj = {}
+languageObj.name = 'JavaScript';
+languageObj.estd = '1995';
+
+languageObj[Symbol('founder')] = 'Brendan'
+console.log(languageObj)
+// we cant access this property or its value by any of iterative way
+//  Object.keys(languageObj) or Object.values(languageObj) or in for loop
+// we cant access the symbol property inside object
 
 
-
-
-
+// ii. avoid name collision in global
