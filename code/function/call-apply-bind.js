@@ -8,12 +8,11 @@
 // and all these methods have to do with `this` variable or keyword and function arguments as well
 
 
-// bind
 var person = {
     firstName: "John",
     lastName: 'Doe',
     getFullName: function() {
-        var fullName = this.fullName + ' ' + this.lastName;
+        var fullName = this.firstName + ' ' + this.lastName;
         return fullName
     }
 }
@@ -21,6 +20,7 @@ var person = {
 var logName = function(lang1, lang2) {
     console.log('Logged '+ this.getFullName())
     console.log('Arguments '+ lang1 + ' ' + lang2);
+    console.log('------------')
 }
 
 // bind() is a method of functions and it creates a copy of the function
@@ -30,3 +30,9 @@ var logName = function(lang1, lang2) {
 var LogPersonName = logName.bind(person);
 
 LogPersonName('en', 'es');
+
+// call() another function method and instead of creating copy of the function like bind()
+// it executes the function and also can control the `this` variable value
+// call() method first parameter is the object, which will be pointed by `this`
+// also takes function parameters separated by comma
+logName.call(person, 'en', 'es');
