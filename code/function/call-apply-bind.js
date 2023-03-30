@@ -36,3 +36,8 @@ LogPersonName('en', 'es');
 // call() method first parameter is the object, which will be pointed by `this`
 // also takes function parameters separated by comma
 logName.call(person, 'en', 'es');
+
+
+// apply() another function method same as call()
+// only difference is apply takes parameters in an array instead of flat comma separated
+logName.apply(person, ['en', 'es'])
