@@ -45,7 +45,8 @@ logName.apply(person, ['es', 'en'])
 
 
 
-// function borrowing
+// usage of these functions
+// function borrowing with apply() or call method()
 var student = {
     firstName: 'Jisan',
     lastName: 'Mia',
@@ -53,3 +54,20 @@ var student = {
 }
 
 console.log(person.getFullName.apply(student)) // Jisan Mia
+
+
+
+
+// function currying using bind() method
+// creates a copy of a function but with some preset parameters
+// very useful in mathematical situation.
+
+function multiply(a,b) {
+    return a*b;
+}
+
+var multiplyByTwo = multiply.bind(this, 2);
+console.log(multiplyByTwo(5)) // 10
+
+var multiplyByThree = multiply.bind(this, 3);
+console.log(multiplyByThree(2)) // 6
