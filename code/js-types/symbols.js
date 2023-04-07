@@ -50,4 +50,30 @@ console.log(languageObj)
 // we cant access the symbol property inside object
 
 
-// ii. avoid name collision in global
+// ii. avoid name collision in global (if we want to create our own methods which is already built-in, we can use symbol)
+
+
+
+// we cannot delete symbol from outside
+function myFunc() {
+    var PVT = Symbol('my private value');
+
+    return {
+        modify(obj) {
+            obj[PVT] = true
+        },
+        output(obj) {
+            return obj[PVT]
+        }
+    }
+}
+
+const result = myFunc();
+const myObj = {name: 'JS', founded: '1995'}
+
+result.modify(myObj)
+console.log(result.output(myObj))
+
+delete myObj['Symbol(my private value)'] // though it cannot be deleted but it will not throw any error 
+
+console.log(myObj) 
