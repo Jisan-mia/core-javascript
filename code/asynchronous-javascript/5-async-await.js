@@ -25,3 +25,21 @@ async function asyncFunc() {
 }
 asyncFunc()
   .then((result) => console.log(result))
+
+
+/* await
+- await keyword can be put infront of any async promise based function to pause 
+- the code until that promise settles and returns it's results
+- await only works inside async functions. cannot use await in normal functions
+*/
+
+async function greet(){
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello world!'), 1000)
+  })
+
+  let result = await promise; // wait until the promise resolves
+
+  console.log(result) // Hello world!
+}
+greet();
