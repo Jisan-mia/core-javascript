@@ -1,10 +1,5 @@
-// Promise
-// javascript promise which is self-explanatory. it promises to resolve or reject something based on conditions
-// Promise takes a function as parameter
-// and the parameter takes 2 functions as parameter
-// i) resolve -> to successfully resolve a promise
-// ii) reject -> to reject/fail a promise
 
+// example of promise
 const hasMeeting = false;
 
 const meeting = new Promise((resolve, reject) => {

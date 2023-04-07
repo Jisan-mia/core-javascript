@@ -4,7 +4,7 @@
 // browser or nodejs components
 /*
 - javascript engine which consists of 2 components
-    i. heap -> for memory management
+    i. memory heap -> for memory management
     ii. call stack -> code executions happens here
 - web apis -> provided by browser and for nodejs there is c++ apis 
 - event loop -> event loop pulls non-blocking asynchronous task from render queue, microtask queue, callback queue to the call stack and executes there
