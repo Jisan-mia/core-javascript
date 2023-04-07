@@ -40,10 +40,13 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 
+
 myPromise
   .then(onFulfillment)
   .catch(onRejected)
 
+
+// success and failure callbacks
 function onFulfillment(result) {
   console.log(result);
 }

@@ -1,33 +1,27 @@
 // async await in javascript
-const hasMeeting = true;
+/*
+- there is way to improve handling asynchronous task even further
+- by using async/await keywords introduced in ES2017(ES8)
+- the async await keywords allow us to write completely synchronous looking 
+- code while performing asynchronous tasks behind the scenes.
+*/
 
-const meeting = new Promise((resolve, reject) => {
-  if (!hasMeeting) {
-    const meetingDetail = {
-      name: "Technical Discussion",
-      tool: "Google Meet",
-      time: "11:00 AM",
-    };
-    resolve(meetingDetail);
-  } else {
-    reject(new Error("Already meeting scheduled"));
-  }
-});
+/* async
+- the async keyword is used to declare async functions
+- async functions are functions that are instances of the AsyncFunction constructor
+- Unlike normal functions, async functions always return a promise
+*/
 
-const addToCalender = (meetingDetail) => {
-  const calenderDetail = `Meeting for ${meetingDetail.name} added on calender in ${meetingDetail.tool} at ${meetingDetail.time}`;
-  return Promise.resolve(calenderDetail);
-};
-
-async function myMeeting() {
-  try {
-    const meetingDetail = await meeting;
-    const calenderDetail = await addToCalender(meetingDetail);
-
-    console.log(calenderDetail);
-  } catch {
-    console.log('something went wrong')
-  }
+// normal function
+function normalFunc() {
+  return 'hello'
 }
+console.log(normalFunc()) // hello
 
-myMeeting();
+
+// async function which returns promise
+async function asyncFunc() {
+  return 'world'
+}
+asyncFunc()
+  .then((result) => console.log(result))
