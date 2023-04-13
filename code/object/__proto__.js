@@ -1,5 +1,11 @@
-// this is not recommended
+// inheritance
+// one object get access to the properties and methods of another objects
 
+// reflection
+// an object can look at itself, listing and changing its properties and methods
+
+
+// this is not recommended
 var person = {
     firstName: 'Default', 
     lastName: 'Default',
