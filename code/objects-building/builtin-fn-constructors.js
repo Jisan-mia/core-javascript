@@ -4,7 +4,6 @@
 var str = new String('Hello')
 console.log(str.indexOf('o')) // 4 | indexOf() method is from String constructor
 
-
 // Number() constructor
 var num = new Number(5)
 console.log(num.toString()) // '5'
@@ -12,6 +11,7 @@ console.log(num.toString()) // '5'
 // Boolean() constructor
 var bool = new Boolean(true)
 console.log(bool.toString()) // 'true'
+
 
 
 // we can own custom method or properties inside prototype of built in function constructor and can use it everywhere
