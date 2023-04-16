@@ -1,18 +1,11 @@
-// es6 modules
-// we can export javascript code from one file to another by exporting
-// and import from the another file
-
-// 2 ways we can export code
-// i. named export
-// ii. default export
-
-// named export is just, using the export keyword in front of the code
-export const me = {
+// in node module there is only one way to export code from one file to another
+// is by using module.exports
+ const me = {
     firstName: 'jisan',
     lastName: 'mia'
 }
 
-export const sakib = {
+ const sakib = {
     firstName: 'sakib',
     lastName: 'hasan'
 }
@@ -20,5 +13,10 @@ export const sakib = {
 function printUser(user) {
     return user.firstName + ' ' + user.lastName;
 }
-// default export
-export default printUser;
+
+// exporting codes in an object
+module.exports = {
+    me: me,
+    sakib:sakib,
+    printUser: printUser
+}
