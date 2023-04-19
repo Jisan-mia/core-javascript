@@ -1,1 +1,4 @@
 code/npm/node_modules
+code/parcel/node_modules
+code/parcel/dist
+code/parcel/.cache
