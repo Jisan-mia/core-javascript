@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  padding: 1rem;
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  transform: translateX(-200px);
+  width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.close {
+  font-size: 1.5rem;
+  align-items: flex-end;
+  color: white;
+  align-self: self-end;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+ul > li > a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#menu_btn {
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+}
