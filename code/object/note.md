@@ -5,4 +5,5 @@
 - Inheritance
   - inheriting other classes properties and methods
 - Abstraction
+  - showing user only good interface of a program by hiding complex implementations details
 - Polymorphism
