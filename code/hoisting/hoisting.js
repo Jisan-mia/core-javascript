@@ -16,7 +16,7 @@ a = 'jisan' // value assignment
 // in let declaration, javascript also pulls out that variable declaration on top of it scope
 // but don't assign undefined as value here
 // instead javascript assigns undefined where let variable was declared then assigns it's value
-// thats why we cann't access variable with let/const before initialization
+// thats why we can't access variable with let/const before initialization
 // console.log(b) // reference error
 // let b = 'hello'
 
